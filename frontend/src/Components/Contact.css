@@ -1,0 +1,37 @@
+.contact-details{
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(19deg,#21D4FD,#B721FF);
+}
+
+.contact-details .contact-us{
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+
+.contact-details .address{
+    font-size: 23px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.contact-btns{
+    margin-top: 10px;
+}
+
+.contact-btns .MuiSvgIcon-root{
+    font-size: 40px;
+    margin: 10px;
+}
+.contact-btns .call-btn{
+    color: #2103a6;
+}
+
+.contact-btns .whatsapp-btn{
+    color: #28e309;
+}
