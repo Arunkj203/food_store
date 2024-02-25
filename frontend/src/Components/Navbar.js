@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Navbar.css";
+import "./Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,32 +13,24 @@ function Navbar() {
   return (
     <div>
       <div className="container-xxl   bg-dark hero-header ">
-        <div className=" my-2 py-5 px-3 ">
+        <div className="text-container my-2 py-5 px-3 ">
           <a href="/" className="navbar-brand p-0 ">
-            <h1
-              className="m-0"
-              style={{
-                color: "red",
-                fontSize: "70px",
-                // textAlign: "center",
-              }}
-            >
-              <FontAwesomeIcon icon={faUtensils} className="me-3" />
-              AMMA'S KITCHEN
+            <h1 className="m-0 website-name">
+              <FontAwesomeIcon icon={faUtensils} className="me-3 " />
+              ARM FOODS
             </h1>
             {/* Uncomment the line below if you have a logo image */}
             {/* <img src="img/logo.png" alt="Logo" /> */}
           </a>
           <div className="row align-items-center g-5">
             <div className="col-lg-6 text-center text-lg-start font-weight-bolder">
-              <h1 className="display-3 text-white animated slideInLeft">
-              GET HOME FOOD 
+              <h1 className="hero-text text-white animated slideInLeft">
+                GET HOME FOOD
                 <br />
                 Delicious Meal
               </h1>
               <p className="text-white animated slideInLeft mb-4 pb-2">
-                Food that reminds you of
-                motherhood
+                Food that reminds you of motherhood
               </p>
             </div>
             <div className="col-lg-6 text-center text-lg-end overflow-hidden py-2 w-20 h-10">

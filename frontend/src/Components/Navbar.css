@@ -3,6 +3,60 @@
   font-size: 200px;
 }
 
+.website-name {
+  color: red;
+  font-size: 30px;
+  text-align: left;
+  margin: 10px auto;
+}
+
+.hero-text {
+  font-size: 20px;
+}
+
+.breakfast {
+  position: relative;
+}
+
+.breakfast article {
+  position: inherit;
+}
+
+.breakfast article img {
+  width: 80vw;
+  max-width: 500px;
+}
+
+.breakfast article h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (width > 640px) {
+  /* Make the logo smaller when on small screens */
+
+  .website-name {
+    font-size: 60px;
+  }
+
+  .hero-text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (width > 1024px) {
+  /* Make the logo smaller when on small screens */
+
+  .website-name {
+    font-size: 75px;
+  }
+
+  .hero-text {
+    font-size: 60px;
+  }
+}
 /* .navbar{
     /* width: 100vw;
     height: 500px;

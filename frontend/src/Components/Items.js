@@ -57,8 +57,10 @@ function Items() {
                 src={"../food/" + row.image}
                 alt="none"
                 style={{
-                  width: "400px",
+                  width: "100%",
+                  maxWidth: "400px",
                   height: "350px",
+                  objectFit: "contain",
                   padding: "15px",
                   justifyContent: "center",
                 }}

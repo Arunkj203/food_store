@@ -72,6 +72,7 @@ function Menu() {
               TabIndicatorProps={{
                 style: {
                   backgroundColor: "orange",
+                  display:"grid",
                 },
               }}
             >
@@ -149,14 +150,14 @@ function Menu() {
                 aria-labelledby={`tab-0`}
                 style={{ marginLeft: "50px", marginTop: "40px" }}
               >
-                <div id="tab-1" className="tab-pane fade show p-0 active">
+                <div id="tab-1" className="tab-pane fade show p-0 active breakfast">
                   <article className={styles.article}>
                     <img
                       className={styles.image}
                       src={table}
                       alt="background"
                     />
-                    <h1 className={styles.header}>React Is Awesome</h1>
+                    <h1 className={styles.header}>Currently <br/> Not <br/> Available</h1>
                   </article>
                 </div>
               </Typography>
