@@ -17,7 +17,8 @@ function Navbar() {
           <a href="/" className="navbar-brand p-0 ">
             <h1 className="m-0 website-name">
               <FontAwesomeIcon icon={faUtensils} className="me-3 " />
-              ARM FOODS
+              {/* ARM FOODS */}
+              SRI VINAYAGA FOODS
             </h1>
             {/* Uncomment the line below if you have a logo image */}
             {/* <img src="img/logo.png" alt="Logo" /> */}

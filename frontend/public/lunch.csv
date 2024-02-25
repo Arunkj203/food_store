@@ -1,0 +1,54 @@
+name,item,price,image
+Tomato,Rice,45,tomato rice.jpg
+Lemon,Rice,45,lemon rice.jpg
+Tamarind,Rice,45,tamirand ice.jpg
+Curry Leaves,Rice,45,curry leaves rice.jpg
+Curd,Rice,45,curd rice.jpg
+Egg Rice,Rice,45,egg rice.jpg
+Sambar,Rice,45,sambar rice.jpg
+Coriander Leaves,Rice,45,coriander rice.jpg
+Mint,Rice,45,mint rice.jpg
+White,Rice,30,white rice.jpg
+Veg,Biriyani,60,vegetable briyani.jpg
+Coconut Milk,Biriyani,60,coconut milk pulao.jpeg
+Pulao,Biriyani,60,pulao with chicken gravy.jpeg
+Mushroom,Biriyani,70,mushroom briyani.jpeg
+Chicken,Biriyani,120,chicken briyani.jpg
+Mutton,Biriyani,250,mutton briyani.jpg
+Prawn,Biriyani,120,prawn briyani.jpeg
+Chicken,Gravy,50,chicken gravy.jpeg
+Mutton,Gravy,100,mutton gravy.jpeg
+Egg,Gravy,60,egg gravy.jpeg
+Prawn,Gravy,70,menu-1.jpg
+Squid,Gravy,70,squid gravy.jpeg
+Fish,Gravy,30,fish gravy.jpeg
+Crab,Gravy,50,nandu gravy.jpeg
+Crab Rasam,Gravy,30,crab rasam.jpeg
+nethili,gravy,50,nethili gravy.jpg
+Dry Fish,Gravy,50,menu-1.jpg
+Full Meals,Meals,80,meals.jpg
+Chicken Chukka,Side Dishes,50,menu-1.jpg
+Mutton Chukka,Side Dishes,100,menu-1.jpg
+Fish Fry,Side Dishes,100,fish fry.jpg
+Crab Fry,Side Dishes,Free,crab thokku.jpg
+Prawn Fry,Side Dishes,Free,prawn fry.jpg
+Pepper Chicken,Side Dishes,50,pepper chicken.jpg
+Omelette,Side Dishes,20,omelete.jpg
+Nethili Fry,Side Dishes,50,nethili fry.jpg
+Egg Podimas,Side Dishes,20,egg podimas.jpg
+Plain,dosa,10,plain dosa.jpg
+Ghee,dosa,10,ghee dosa.jpg
+Onion,dosa,10,onion dosa.jpg
+Masala,dosa,10,masala dosa.jpg
+Podi,dosa,10,podi dosa.jpg
+Wheat,dosa,10,masala dosa.jpg
+Ragi,dosa,10,ragi dosa.jpg
+Millets,dosa,10,millet dosa.jpg
+Egg,dosa,10,egg dosa.jpg
+plain,idli,10,idli.jpg
+podi,idli,10,podi idli.jpg
+Poori,Poori,10,poori.jpg
+Pongal,Pongal,10,pongal.jpg
+Rava,Kichadi,40,rava kichadi.jpg
+Samba rava,Kichadi,10,samba rava kichadi.jpg
+Ragi Semiya,Semiya,10,ragi semiya.jpg

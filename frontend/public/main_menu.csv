@@ -1,6 +1,13 @@
-name,image
-Rice,white rice.jpg
-Biriyani,chicken briyani.jpg
-Gravy,egg gravy.jpeg
-Meals,menu-1.jpg
-Side Dishes,menu-1.jpg
+name,time,image
+Rice,lunch,white rice.jpg
+Biriyani,lunch,chicken briyani.jpg
+Gravy,lunch,egg gravy.jpeg
+Meals,lunch,menu-1.jpg
+Side Dishes,lunch,menu-1.jpg
+dosa,dinner,plain dosa.jpg
+idli,dinner,idli.jpg
+Chapathi,dinner,chapathi.jpg
+Poori,dinner,poori.jpg
+Pongal,dinner,pongal.jpg
+Kichadi,dinner,rava kichadi.jpg
+Semiya,dinner,semiya kichadi.jpg

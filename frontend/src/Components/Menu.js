@@ -27,17 +27,20 @@ function Menu() {
   const [data, setdata] = useState([]);
 
   const handleTabChange = (event, newValue) => {
-    if (newValue !== 0) {
-      fetchData("main_menu.csv");
+    if (newValue === 1) {
+      fetchData("main_menu.csv", "lunch");
+    }
+    if (newValue === 2) {
+      fetchData("main_menu.csv", "dinner");
     }
     setSelectedTab(newValue);
   };
 
   useEffect(() => {
-    fetchData("main_menu.csv");
+    fetchData("main_menu.csv", "lunch");
   }, []);
 
-  const fetchData = async (file_path) => {
+  const fetchData = async (file_path, sec_time) => {
     try {
       const response = await axios.get(file_path);
       const csvData = response.data;
@@ -45,7 +48,10 @@ function Menu() {
       Papa.parse(csvData, {
         header: true,
         complete: (results) => {
-          setdata(results.data);
+          const filteredRows = results.data.filter(
+            (row) => row.time === sec_time
+          );
+          setdata(filteredRows);
         },
       });
     } catch (error) {
@@ -68,11 +74,12 @@ function Menu() {
               value={selectedTab}
               onChange={handleTabChange}
               aria-label="icon position tabs example"
+              variant="scroll"
               centered
               TabIndicatorProps={{
                 style: {
                   backgroundColor: "orange",
-                  display:"grid",
+                  display: "grid",
                 },
               }}
             >
@@ -150,14 +157,19 @@ function Menu() {
                 aria-labelledby={`tab-0`}
                 style={{ marginLeft: "50px", marginTop: "40px" }}
               >
-                <div id="tab-1" className="tab-pane fade show p-0 active breakfast">
+                <div
+                  id="tab-1"
+                  className="tab-pane fade show p-0 active breakfast"
+                >
                   <article className={styles.article}>
                     <img
                       className={styles.image}
                       src={table}
                       alt="background"
                     />
-                    <h1 className={styles.header}>Currently <br/> Not <br/> Available</h1>
+                    <h1 className={styles.header}>
+                      Currently <br /> Not <br /> Available
+                    </h1>
                   </article>
                 </div>
               </Typography>
@@ -175,7 +187,7 @@ function Menu() {
                       <div
                         className="col-lg-6"
                         onClick={() => {
-                          navigate("/items?data=" + row.name);
+                          navigate("/items?time=lunch&item=" + row.name);
                         }}
                       >
                         <div className="d-flex align-items-center py-2">
@@ -212,7 +224,7 @@ function Menu() {
                       <div
                         className="col-lg-6"
                         onClick={() => {
-                          navigate("/items?data=" + row.name);
+                          navigate("/items?time=dinner&item=" + row.name);
                         }}
                       >
                         <div className="d-flex align-items-center py-2">

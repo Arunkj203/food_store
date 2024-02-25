@@ -17,10 +17,13 @@ function Items() {
 
   const { search } = useLocation();
   const params = new URLSearchParams(search);
-  const data = params.get("data");
+  const time = params.get("time");
+  const item = params.get("item");
+  const file_path = time + ".csv";
+
 
   const [filteredData, setFilteredData] = useState([]);
-  const file_path = "menu.csv";
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +35,7 @@ function Items() {
           header: true,
           complete: (results) => {
             const filteredRows = results.data.filter(
-              (row) => row.item === data
+              (row) => row.item === item
             );
 
             setFilteredData(filteredRows);
@@ -81,7 +84,7 @@ function Items() {
                 }}
               >
                 <h3 className="text-secondry">₹{row.price}</h3>
-                <IconButton
+                {/* <IconButton
                   color="primary"
                   aria-label="add to shopping cart"
                   onClick={() => {
@@ -89,7 +92,7 @@ function Items() {
                   }}
                 >
                   <AddCircleOutlineIcon fontSize="large" />
-                </IconButton>
+                </IconButton> */}
               </Card.Footer>
             </Card>
           </Col>
