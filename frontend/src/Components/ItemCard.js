@@ -19,11 +19,7 @@ function ItemCard({ row }) {
       quantity: 1,
       price: row.price,
     };
-
-    // Add the new item to the cart items array
     orders.push(newItem);
-
-    // Save the updated cart items array back to localStorage
     localStorage.setItem("orders", JSON.stringify(orders));
     setValue(1);
   };
@@ -31,15 +27,14 @@ function ItemCard({ row }) {
   const handleIncrease = () => {
     const newQuantity = value + 1;
     setValue(newQuantity);
-      const orders = JSON.parse(localStorage.getItem("orders"));
-      const itemIndex = orders.findIndex((item) => item.name === row.name);
-      orders[itemIndex] = {
-        ...orders[itemIndex],
-        quantity: orders[itemIndex].quantity + 1, // Update the quantity
-        // Update other properties as needed
-      };
-      localStorage.setItem("orders", JSON.stringify(orders));
-    
+    const orders = JSON.parse(localStorage.getItem("orders"));
+    const itemIndex = orders.findIndex((item) => item.name === row.name);
+    orders[itemIndex] = {
+      ...orders[itemIndex],
+      quantity: orders[itemIndex].quantity + 1, // Update the quantity
+      // Update other properties as needed
+    };
+    localStorage.setItem("orders", JSON.stringify(orders));
   };
 
   const handleDecrease = () => {
