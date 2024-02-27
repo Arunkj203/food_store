@@ -22,3 +22,31 @@
   height: fit-content;
   margin: auto;
 }
+
+
+
+.trigger-content {
+  font-size: 16px;
+  color: blue;
+  /* background-color: lightgray; */
+  padding: 20px;
+  text-align: left;
+}
+/* .content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+
+}
+
+.list-group-item {
+  .card-title {
+    cursor: pointer;
+  }
+  .card-collapse {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+  }
+  h2 {margin-top: 5px !important;}
+} */

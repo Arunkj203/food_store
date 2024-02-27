@@ -9,7 +9,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 
 import styles from "./Menu.css";
-import table from "../img/table_rot.jpg";
+import table from "../img/new_bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUtensils,
@@ -20,11 +20,15 @@ import {
 
 import Papa from "papaparse";
 import axios from "axios";
+import Collapsible from "react-collapsible";
 
 function Menu() {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState(1);
   const [data, setdata] = useState([]);
+
+  const [isOpen, setIsOpen] = useState(false);
+
 
   const handleTabChange = (event, newValue) => {
     if (newValue === 1) {
@@ -74,8 +78,8 @@ function Menu() {
               value={selectedTab}
               onChange={handleTabChange}
               aria-label="icon position tabs example"
-              variant="scroll"
-              centered
+              centered // Center the tabs
+              scrollable // Make the tabs scrollable
               TabIndicatorProps={{
                 style: {
                   backgroundColor: "orange",
@@ -329,4 +333,33 @@ data-wow-delay="0.1s"
   // const images = importAll(
   //   require.context("../img/item/", false, /\.(png|jpe?g|svg)$/)
   // );
+  // code to move to another page
+  //   <div className="content">
+  //   {data.map((row, index) => (
+  //     <Collapsible
+  //       trigger={row.name}
+  //       transitionTime={100}
+  //       open={isOpen}
+  //       handleTriggerClick={toggleCollapsible}
+  //       triggerStyle={{
+  //         fontsize: "100px",
+  //         color: "blue",
+  //         backgroundcolor: "lightgray",
+  //         padding: "20px",
+  //         textFalign: "left",
+  //       }}
+  //     >
+  //       <div className="trigger-content">
+  //         <p>
+  //           This is the collapsible content. It can be any element
+  //           or React component you like.
+  //         </p>
+  //         <p>
+  //           It can even be another Collapsible component. Check
+  //           out the next section!
+  //         </p>
+  //       </div>
+  //     </Collapsible>
+  //   ))}
+  // </div>
 }

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import Card from "react-bootstrap/Card";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import "./Items.css";
+import ItemCard from "./ItemCard";
+
+import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { useLocation } from "react-router-dom";
-
-import IconButton from "@mui/material/IconButton";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 // import * as XLSX from "xlsx";
 import Papa from "papaparse";
@@ -21,9 +20,7 @@ function Items() {
   const item = params.get("item");
   const file_path = time + ".csv";
 
-
   const [filteredData, setFilteredData] = useState([]);
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,52 +46,34 @@ function Items() {
     fetchData();
   }, []);
 
+  const display = () => {
+    const orders = JSON.parse(localStorage.getItem("orders"));
+    var message = "";
+    var total = 0;
+
+    orders.forEach((key) => {
+      total = total + key.quantity * key.price;
+      message =
+        message +
+        `Item: ${key.name} , Quantity: ${key.quantity} , Price : ₹${key.price}` +
+        "\n";
+    });
+
+    message = message + `Total:${total}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/+919677002548?text=${encodedMessage}`, "_blank");
+  };
+
   return (
     <div>
+      <Button variant="primary" onClick={display}>
+        Order
+      </Button>
       <Row xs={1} md={3} className="g-4 py-5 mx-5">
         {filteredData.map((row, index) => (
           <Col key={index}>
-            <Card>
-              <Card.Img
-                variant="top"
-                src={"../food/" + row.image}
-                alt="none"
-                style={{
-                  width: "100%",
-                  maxWidth: "400px",
-                  height: "350px",
-                  objectFit: "contain",
-                  padding: "15px",
-                  justifyContent: "center",
-                }}
-              />
-              <Card.Body>
-                <Card.Title>{row.name}</Card.Title>
-                <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3 className="text-secondry">₹{row.price}</h3>
-                {/* <IconButton
-                  color="primary"
-                  aria-label="add to shopping cart"
-                  onClick={() => {
-                    navigate("/pdf");
-                  }}
-                >
-                  <AddCircleOutlineIcon fontSize="large" />
-                </IconButton> */}
-              </Card.Footer>
-            </Card>
+            <ItemCard key={index} row={row} />
           </Col>
         ))}
       </Row>

@@ -5,11 +5,16 @@ import React, { useState, useEffect } from "react";
 // import "./Home.css";
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Contact from "./Contact";
 // import { db } from "../firebase";
 
 function Home() {
   return (
     <div className="page-container ">
+            <div className="contact-bar">
+        <Contact />
+      </div>  
+
       <div class="container-xxl position-relative px-5">
         <Navbar />
       </div>
@@ -18,9 +23,7 @@ function Home() {
         <Menu />
       </div>
 
-      {/* <div className="contact-bar">
-        <Contact />
-      </div>  */}
+
     </div>
   );
 }

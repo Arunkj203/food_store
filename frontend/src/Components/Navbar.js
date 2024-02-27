@@ -14,15 +14,14 @@ function Navbar() {
     <div>
       <div className="container-xxl   bg-dark hero-header ">
         <div className="text-container my-2 py-5 px-3 ">
-          <a href="/" className="navbar-brand p-0 ">
+          {/* <a href="/" className="navbar-brand p-0 ">
             <h1 className="m-0 website-name">
               <FontAwesomeIcon icon={faUtensils} className="me-3 " />
-              {/* ARM FOODS */}
+              ARM FOODS 
               SRI VINAYAGA FOODS
             </h1>
-            {/* Uncomment the line below if you have a logo image */}
-            {/* <img src="img/logo.png" alt="Logo" /> */}
-          </a>
+
+          </a> */}
           <div className="row align-items-center g-5">
             <div className="col-lg-6 text-center text-lg-start font-weight-bolder">
               <h1 className="hero-text text-white animated slideInLeft">
