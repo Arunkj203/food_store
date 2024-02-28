@@ -50,25 +50,39 @@ function Menu() {
   };
 
   return (
-    <div className="myclass">
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="section-title ff-secondary text-center text-primary fw-normal">
-              Food Menu
-            </h5>
-            <h1 className="mb-5">Most Popular Items</h1>
-          </div>
-        
-          <div className="swiper-title">
-                <h1>title</h1>
-                <div className="swiper-items">
-                  <Items time="lunch" item="Gravy" />
-                </div>
-              </div>
-     
+    // <div className="myclass container-xxl">
+    //   <div className="container-xxl py-5">
+    //     <div className="container">
+    //       <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+    //         <h5 className="section-title ff-secondary text-center text-primary fw-normal">
+    //           Food Menu
+    //         </h5>
+    //         <h1 className="mb-5">Most Popular Items</h1>
+    //       </div>
+
+    //       <div className="swiper-title">
+    //             <h1>title</h1>
+    //             <div className="swiper-items">
+    //               <Items time="lunch" item="Gravy" />
+    //             </div>
+    //           </div>
+
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="menu-container">
+      <div className="menu-title">
+        <h1>Food Menu</h1>
+      </div>
+      <div className="swipers-container">
+        <div className="swipers-title">
+          <h1>Title</h1>
+        </div>
+        <div className="swiper-box">
+          <Items time="lunch" item="Gravy" />
         </div>
       </div>
+      
     </div>
   );
 }
@@ -369,12 +383,14 @@ data-wow-delay="0.1s"
   //   setSelectedTab(newValue);
   // };
 
-   {/* {data.map((row, index) => (
+  {
+    /* {data.map((row, index) => (
               <div className="swiper-title">
                 <h1>{row.name}</h1>
                 <div className="swiper-items">
                   <Items time="lunch" item={row.name} />
                 </div>
               </div>
-            ))} */}
+            ))} */
+  }
 }

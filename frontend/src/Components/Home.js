@@ -17,11 +17,9 @@ function Home() {
       <div className="contact-bar">
         <Navbar />
       </div>
-
       <div class="container-xxl position-relative">
         <Hero />
       </div>
-
       <div className="menu">
         <Menu />
       </div>

@@ -62,74 +62,93 @@ function ItemCard({ row }) {
   };
 
   return (
-    <div>
-      <Card style={{
-            backgroundColor : "goldenrod",
-          }}>
-        <Card.Img
-          variant="top"
-          src={"../food/" + row.image}
-          alt="none"
-          style={{
-            width: "100%",
-            maxWidth: "400px",
-            height: "300px",
-            objectFit: "contain",
-            padding: "15px",
-            justifyContent: "center",
-          }}
-        />
-        <Card.Body
-          style={{
-            color: "black",
-          }}
-        >
-          <Card.Title>{row.name}</Card.Title>
-          <Card.Text>{row.desc}</Card.Text>
-        </Card.Body>
-        <Card.Footer
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <h3 className="text-secondry">₹{row.price}</h3>
-          {value === 0 ? (
-            <IconButton
-              color="primary"
-              aria-label="add to shopping cart"
-              onClick={additem}
-            >
-              <AddCircleOutlineIcon fontSize="large" />
-            </IconButton>
-          ) : (
-            <div
-              style={{
-                display: "flex",
-                // justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <ButtonGroup className="mb-2">
-                <Button variant="primary" onClick={handleDecrease}>
-                  -
-                </Button>
-                <Button variant="info">{value}</Button>
-                <Button variant="primary" onClick={handleIncrease}>
-                  +
-                </Button>
-
-                <Button variant="danger" onClick={handleDelete}>
-                  <Trash size={20} />
-                </Button>
-              </ButtonGroup>
-            </div>
-          )}
-        </Card.Footer>
-      </Card>
+    <div className="card-container">
+    <div className="card-image">
+      <img src={"food/"+row.image} alt={row.name}></img>
     </div>
+    <div className="card-content">
+      <h1>{row.name}</h1> 
+      <h2>{row.desc}</h2>
+      <h3>Rs {row.price}</h3>
+    </div>
+  </div>
+  
   );
 }
 
 export default ItemCard;
+
+
+
+// <div className="cards-container">
+// <Card
+//   style={{
+//     width: "100%",
+//     height: "100%",
+//     marginBottom: "3%",
+//     backgroundColor: "goldenrod",
+//   }}
+// >
+//   <Card.Img
+//     variant="top"
+//     src={"../food/" + row.image}
+//     alt="none"
+//     style={{
+//       width: "100%",
+//       maxWidth: "400px",
+//       height: "300px",
+//       objectFit: "contain",
+//       padding: "15px",
+//       justifyContent: "center",
+//     }}
+//   />
+//   <Card.Body
+//     style={{
+//       color: "black",
+//     }}
+//   >
+//     <Card.Title>{row.name}</Card.Title>
+//     <Card.Text>{row.desc}</Card.Text>
+//   </Card.Body>
+//   <Card.Footer
+//     style={{
+//       display: "flex",
+//       justifyContent: "space-between",
+//       alignItems: "center",
+//     }}
+//   >
+//     <h3 className="text-secondry">₹{row.price}</h3>
+//     {value === 0 ? (
+//       <IconButton
+//         color="primary"
+//         aria-label="add to shopping cart"
+//         onClick={additem}
+//       >
+//         <AddCircleOutlineIcon fontSize="large" />
+//       </IconButton>
+//     ) : (
+//       <div
+//         style={{
+//           display: "flex",
+//           // justifyContent: "space-between",
+//           alignItems: "center",
+//         }}
+//       >
+//         <ButtonGroup className="mb-2">
+//           <Button variant="primary" onClick={handleDecrease}>
+//             -
+//           </Button>
+//           <Button variant="info">{value}</Button>
+//           <Button variant="primary" onClick={handleIncrease}>
+//             +
+//           </Button>
+
+//           <Button variant="danger" onClick={handleDelete}>
+//             <Trash size={20} />
+//           </Button>
+//         </ButtonGroup>
+//       </div>
+//     )}
+//   </Card.Footer>
+// </Card>
+// </div>

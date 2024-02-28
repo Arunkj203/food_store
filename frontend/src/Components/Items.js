@@ -19,8 +19,6 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 function Items({ time, item }) {
-
-  
   const file_path = time + ".csv";
 
   const [filteredData, setFilteredData] = useState([]);
@@ -69,26 +67,25 @@ function Items({ time, item }) {
   };
 
   return (
-    <div>
+    <div className="swiper">
+      
       {/* <Button variant="primary" onClick={display}>
         Order
-      </Button> */}
-
+  </Button> */}
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView="3"
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={false}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+      effect="coverflow"
+      grabCursor={true}
+      modules={[EffectCoverflow , Pagination]}
+      pagination = {false}
+      slidesPerView={3}
+      centeredSlides={true}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
       >
         {filteredData?.map((row, index) => (
           <SwiperSlide>
@@ -126,4 +123,3 @@ export default Items;
 // const item = params.get("item");
 //  <ItemCard key={index} row={row} />
 // const navigate = useNavigate();
-

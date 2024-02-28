@@ -1,4 +1,3 @@
-
 .article {
   height: 100%;
   position: relative;
@@ -48,6 +47,8 @@
 }
 
 .swiper-items {
+  width: 100%;
+  height: 100%;
   grid-column: span 6;
   background-color: #ced4da;
 }
@@ -70,3 +71,31 @@
   }
   h2 {margin-top: 5px !important;}
 } */
+
+.menu-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.menu-container .menu-title{
+  height:80px;
+  width:100%;
+  text-align:center;
+}
+
+.swipers-container{
+  width: 100%;
+  height:100px;
+  position:inherit;
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.swipers-title{
+  grid-column:span 1;
+}
+
+.swiper-box{
+  grid-column:span 4;
+}
