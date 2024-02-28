@@ -11,13 +11,16 @@ import Row from "react-bootstrap/Row";
 import Papa from "papaparse";
 import axios from "axios";
 
-function Items() {
-  const navigate = useNavigate();
+import { Swiper, SwiperSlide } from "swiper/react";
 
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
-  const time = params.get("time");
-  const item = params.get("item");
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
+function Items({ time, item }) {
+
+  
   const file_path = time + ".csv";
 
   const [filteredData, setFilteredData] = useState([]);
@@ -67,16 +70,32 @@ function Items() {
 
   return (
     <div>
-      <Button variant="primary" onClick={display}>
+      {/* <Button variant="primary" onClick={display}>
         Order
-      </Button>
-      <Row xs={1} md={3} className="g-4 py-5 mx-5">
-        {filteredData.map((row, index) => (
-          <Col key={index}>
+      </Button> */}
+
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView="3"
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={false}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {filteredData?.map((row, index) => (
+          <SwiperSlide>
             <ItemCard key={index} row={row} />
-          </Col>
+          </SwiperSlide>
         ))}
-      </Row>
+      </Swiper>
     </div>
   );
 }
@@ -96,3 +115,15 @@ export default Items;
 // const excelData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
 // console.log(excelData);
+
+// <Col key={index}>
+//
+// </Col>
+
+// const { search } = useLocation();
+// const params = new URLSearchParams(search);
+// const time = params.get("time");
+// const item = params.get("item");
+//  <ItemCard key={index} row={row} />
+// const navigate = useNavigate();
+

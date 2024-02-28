@@ -1,3 +1,4 @@
+
 .article {
   height: 100%;
   position: relative;
@@ -23,8 +24,6 @@
   margin: auto;
 }
 
-
-
 .trigger-content {
   font-size: 16px;
   color: blue;
@@ -32,6 +31,27 @@
   padding: 20px;
   text-align: left;
 }
+
+.swiper-title {
+  display: grid;
+  /* place-items: center; */
+  grid-template-columns: repeat(7, 1fr);
+  height: 100px;
+  width: 100%;
+  /* background-color: black; */
+  font-size: 24px;
+}
+
+.swiper-title h1 {
+  width: 100%;
+  background-color: #000814;
+}
+
+.swiper-items {
+  grid-column: span 6;
+  background-color: #ced4da;
+}
+
 /* .content {
   background-color: #fff;
   padding: 20px;

@@ -1,6 +1,8 @@
 import "./App.css";
 import Home from "./Components/Home";
 import Items from "./Components/Items";
+import Menu from "./Components/Menu";
+
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UploadItem from "./Components/UploadItem";
@@ -16,9 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<UploadItem />} />
           <Route path="/update" element={<UpdateItem />} />
-          <Route path="/items" element={<Items />} />
-     
-         
+          <Route path="/items" element={<Menu />} />
         </Routes>
       </Router>
     </div>

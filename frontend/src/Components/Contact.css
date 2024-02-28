@@ -1,37 +1,36 @@
-.contact-details{
+.contact-details {
     width: 100vw;
     height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(19deg,#21D4FD,#B721FF);
-}
+  
+    /* background-image: linear-gradient(19deg, rgb(71, 52, 115), rgb(117, 118, 55)); */
 
-.contact-details .contact-us{
+  }
+  
+  .contact-details .contact-us {
     font-size: 30px;
     font-weight: 700;
-    
-}
-
-.contact-details .address{
+  }
+  
+  .contact-details .address {
     font-size: 23px;
     margin-top: 5px;
     color: #fff;
-}
-
-.contact-btns{
+  }
+  
+  .contact-btns {
     margin-top: 10px;
-}
-
-.contact-btns .MuiSvgIcon-root{
+  }
+  
+  .contact-btns .MuiSvgIcon-root {
     font-size: 40px;
     margin: 10px;
-}
-.contact-btns .call-btn{
+  }
+  .contact-btns .call-btn {
     color: #2103a6;
-}
-
-.contact-btns .whatsapp-btn{
+  }
+  
+  .contact-btns .whatsapp-btn {
     color: #28e309;
-}
+  }

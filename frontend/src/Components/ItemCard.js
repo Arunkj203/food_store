@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
 import { Trash } from "react-bootstrap-icons";
-
+import "./ItemCard.css";
 import IconButton from "@mui/material/IconButton";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
@@ -63,7 +63,9 @@ function ItemCard({ row }) {
 
   return (
     <div>
-      <Card>
+      <Card style={{
+            backgroundColor : "goldenrod",
+          }}>
         <Card.Img
           variant="top"
           src={"../food/" + row.image}
@@ -71,13 +73,17 @@ function ItemCard({ row }) {
           style={{
             width: "100%",
             maxWidth: "400px",
-            height: "350px",
+            height: "300px",
             objectFit: "contain",
             padding: "15px",
             justifyContent: "center",
           }}
         />
-        <Card.Body>
+        <Card.Body
+          style={{
+            color: "black",
+          }}
+        >
           <Card.Title>{row.name}</Card.Title>
           <Card.Text>{row.desc}</Card.Text>
         </Card.Body>
