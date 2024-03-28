@@ -1,12 +1,21 @@
 import Hero from "./components/Hero";
+import Menu from "../menu/Menu"
 import "./home.css";
+
+
+
 const Home = () => {
+
+
 	return (
 		<section>
-			{/* <h1 className="text-center">Home Page</h1> */}
 			<Hero />
+			<Menu />
 		</section>
 	);
 };
 
 export default Home;
+
+
+
