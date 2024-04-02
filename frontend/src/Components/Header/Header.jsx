@@ -44,7 +44,7 @@ const Header = () => {
 		}
 	}
 	return (
-		<header className={`w-full  flex flex-col items-center justify-center bg-black ${isSticky ? "fixed top-0 h-24" : "h-36"
+		<header className={`w-full  flex flex-col items-center justify-center bg-black ${isSticky ? "fixed top-0 h-24" : "h-28"
 			} z-10 transition-all duration-300 ease-in-out`}>
 
 			{

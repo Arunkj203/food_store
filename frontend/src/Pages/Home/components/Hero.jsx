@@ -20,10 +20,10 @@ const Hero = () => {
 				// spaceBetween={30}
 				centeredSlides={true}
 				loop={true}
-				autoplay={{
-					delay: 2500,
-					disableOnInteraction: false,
-				}}
+				// autoplay={{
+				// 	delay: 2900,
+				// 	disableOnInteraction: false,
+				// }}
 				// pagination={{
 				// 	clickable: true,
 				// }}
@@ -38,8 +38,20 @@ const Hero = () => {
 
 
 				</SwiperSlide>
-				<SwiperSlide className="slide2">Slide 2</SwiperSlide>
-				<SwiperSlide >Slide 3</SwiperSlide>
+
+
+				<SwiperSlide className="slide2 relative">
+					<div className="absolute inset-0 flex items-center justify-start  ml-5">
+						<div className="flex flex-col">
+							<p className="text-white text-7xl">Satisfy Your Cravings</p>
+							<p className="text-white text-6xl">Daily Briyani Offerings for 4+!</p>
+						</div>
+					</div>
+
+				</SwiperSlide>
+
+
+				<SwiperSlide className="slide3">Slide 3</SwiperSlide>
 
 			</Swiper>
 		</section>

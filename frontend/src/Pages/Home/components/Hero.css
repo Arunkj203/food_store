@@ -14,10 +14,10 @@
 }
 
 .swiper-slide {
-  text-align: center;
+  /* text-align: center; */
   font-size: 50px;
   /* background: #fff; */
-  color: blue;
+  color: green;
 
   /* Center slide text vertically */
   display: flex;
@@ -28,8 +28,15 @@
 .slide1 {
   background-image: url("../../../images/pexels-pixabay-372882.jpg");
   background-size: cover;
-  opacity: 0.9;
+
   /* position: relative; */
+}
+
+.slide2 {
+  background-image: url("../../../images/s24.jpg");
+  background-size: cover;
+
+  position: relative;
 }
 
 /* .swiper-slide img {
