@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Italianno&display=swap");
+
+/* .tab-div{
+  background-color: #00bfff;
+} */
+
+.MuiTab-root.Mui-selected {
+  border-bottom: none;
+}
+
+
+/* .active-tab {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: #680000;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; Adjust the radius as needed 
+} */
+
+/* font-family: "Italianno", cursive; */
+
+.headers {
+  color: #191970;
+}
+
+.tab-div .title {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #191970;
+  /* font-size: 250px; */
+}
+
+/* 
+.tabbody {
+  background-color: #87ceeb;
+} */

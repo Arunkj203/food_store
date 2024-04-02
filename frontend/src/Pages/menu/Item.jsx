@@ -1,18 +1,55 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function Item({ item, index }) {
+function Item({ item }) {
 
     const [Qty, setQty] = useState(0);
+
+    useEffect(() => {
+        const existingOrderList = sessionStorage.getItem('order_list')
+
+        if (existingOrderList) {
+            const cartItems = new Map(JSON.parse(existingOrderList))
+            if (cartItems.has(item.name)) {
+                setQty(cartItems.get(item.name));
+            }
+        }
+
+        else{
+            setQty(0);
+        }
+
+
+    }, [item.name]);
+
 
     const dec = () => {
         if (Qty > 0) {
             setQty(Qty - 1)
+            updateCartItems(item.name, Qty - 1)
+        }
+
+        if (Qty === 1) {
+            setQty(Qty - 1)
+            const existingOrderList = sessionStorage.getItem('order_list')
+            const cartItems = new Map(JSON.parse(existingOrderList))
+            cartItems.delete(item.name)
+            sessionStorage.setItem('order_list', JSON.stringify(Array.from(cartItems.entries())));
         }
     }
 
     const inc = () => {
         setQty(Qty + 1)
+        updateCartItems(item.name, Qty + 1)
     }
+
+    const updateCartItems = (itemName, quantity) => {
+        const existingOrderList = sessionStorage.getItem('order_list')
+        const cartItems = new Map(JSON.parse(existingOrderList))
+        cartItems.set(itemName, quantity);
+        sessionStorage.setItem('order_list', JSON.stringify(Array.from(cartItems.entries())));
+    };
+
+
 
 
     return (
@@ -26,7 +63,7 @@ function Item({ item, index }) {
                 <div className='flex justify-between mt-6'>
                     <div class="flex items-center ">
                         <span class="text-3xl font-semibold mr-2">₹</span>
-                        <span class="text-4xl font-bold text-gray-800">{item.price}</span>
+                        <span class="text-3xl font-bold text-gray-800">{item.price}</span>
                     </div>
                     {
                         Qty === 0 ? <div>
@@ -35,7 +72,7 @@ function Item({ item, index }) {
 
                             <div className="flex justify-between mt-6">
                                 <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full" onClick={dec}>-</button>
-                                <span className="text-4xl font-bold text-gray-800">{Qty}</span>
+                                <span className="text-3xl font-bold text-gray-800">{Qty}</span>
                                 <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full" onClick={inc}>+</button>
                             </div>
                     }
