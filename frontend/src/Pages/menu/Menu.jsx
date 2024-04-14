@@ -123,11 +123,7 @@ const Menu = () => {
 				<div className=" headers bg-slate-100  z-10 h-20 mb-4 rounded-full">
 
 					{/* aria-label="lab API tabs example" */}
-					<TabList onChange={handleTabClick} variant="fullWidth" TabIndicatorProps={{
-						style: {
-							display: 'none'
-						}
-					}} >
+					<TabList onChange={handleTabClick} variant="fullWidth" className="flex flex-col text-xl" >
 						{Headers.map((row, index) => (
 
 							<Tab
