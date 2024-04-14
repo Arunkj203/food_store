@@ -33,7 +33,7 @@ const Hero = () => {
 			>
 				<SwiperSlide className="slide1">
 
-					<h1 className="text-7xl text-white p-5 relative">Feel the <br /> Home Food  Experience</h1>
+					<h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-white p-5 relative">Feel the <br /> Home Food  Experience</h1>
 
 
 

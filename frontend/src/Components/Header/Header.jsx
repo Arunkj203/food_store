@@ -51,14 +51,14 @@ const Header = () => {
 				isSticky ?
 
 					<div className="flex items-center justify-between  w-full px-8 ">
-						<h1 className="lg-name font-bold text-6xl">SRI VINAYAGA HOMEFOODS</h1>
-						<button className="flex items-center space-x-2 px-4 py-2 text-slate-200 text-3xl  rounded-md" onClick={show_list}>
+						<h1 className="lg-name font-bold text-xl">SRI VINAYAGA HOMEFOODS</h1>
+						<button className="flex items-center space-x-2 px-4 py-2 text-slate-200 text-3xl rounded-md" onClick={show_list}>
 							<FiMenu /> {/* Menu icon */}
-							<span>Show Menu List</span>
+							<span className="text-sm">Show Menu List</span>
 						</button>
 
 					</div> : <div>
-						<h1 className="lg-name font-bold  text-8xl">SRI VINAYAGA HOMEFOODS</h1>
+						<h1 className="lg-name font-bold  text-2xl sm:text-4xl md:text-5xl lg:text-6xl ">SRI VINAYAGA HOMEFOODS</h1>
 					</div>
 			}
 
