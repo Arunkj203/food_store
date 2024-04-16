@@ -112,10 +112,10 @@ const Menu = () => {
 
 
 	return (
-		<div className="tab-div text-lg m-12">
+		<div className="tab-div text-lg p-[2%]">
 
 			<div className="title flex justify-center mb-7 ">
-				<h1 className="text-9xl">Menu</h1>
+				<h1 className="text-7xl sm:text-8xl md:text-9xl">Menu</h1>
 			</div>
 
 			<TabContext value={activeTab}>
@@ -123,11 +123,7 @@ const Menu = () => {
 				<div className=" headers bg-slate-100  z-10 h-20 mb-4 rounded-full">
 
 					{/* aria-label="lab API tabs example" */}
-					<TabList onChange={handleTabClick} variant="fullWidth" TabIndicatorProps={{
-						style: {
-							display: 'none'
-						}
-					}} >
+					<TabList onChange={handleTabClick} variant="fullWidth" className="flex flex-col text-xl" >
 						{Headers.map((row, index) => (
 
 							<Tab
@@ -139,7 +135,7 @@ const Menu = () => {
 								sx={{
 									fontSize: "1.2rem",
 									fontWeight: "extrabold",
-									color: "#191970",
+									color: activeTab === row.name ? "#ffffff" : "#191970",
 									background: activeTab === row.name ? "linear-gradient(135deg, #007bff, #00bfff)" : "none",
 									borderRadius: activeTab === row.name ? "0.5rem 0.5rem 0.5rem 0.5rem" : "none",
 
@@ -163,7 +159,7 @@ const Menu = () => {
 					{Headers.map((row, index) => (
 
 						<TabPanel key={index} value={row.name}>
-							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-3  '>
+							<div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10'>
 								{Filtereddata.map((item, index) => (
 									<Item item={item} />
 								))

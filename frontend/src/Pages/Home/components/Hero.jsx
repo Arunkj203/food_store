@@ -33,7 +33,7 @@ const Hero = () => {
 			>
 				<SwiperSlide className="slide1">
 
-					<h1 className="text-7xl text-white p-5 relative">Feel the <br /> Home Food  Experience</h1>
+					<h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-white p-5 relative">Feel the <br /> Home Food  Experience</h1>
 
 
 
@@ -43,8 +43,8 @@ const Hero = () => {
 				<SwiperSlide className="slide2 relative">
 					<div className="absolute inset-0 flex items-center justify-start  ml-5">
 						<div className="flex flex-col">
-							<p className="text-white text-7xl">Satisfy Your Cravings</p>
-							<p className="text-white text-6xl">Daily Briyani Offerings for 4+!</p>
+							<p className="text-white text-5xl sm:text-6xl md:text-8xl lg:text-9xl">Satisfy Your Cravings</p>
+							<p className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl">Daily Briyani Offerings for 4+!</p>
 						</div>
 					</div>
 

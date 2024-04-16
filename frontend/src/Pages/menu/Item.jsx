@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {Add, Remove} from '@mui/icons-material';
 
 function Item({ item }) {
 
@@ -53,28 +54,25 @@ function Item({ item }) {
 
 
     return (
-
-
-        <div class="bg-slate-100 rounded-lg shadow-md p-6">
-            <img src={`food/` + item.image} alt="Product Image" class="w-full h-60 object-cover mb-4 rounded-md" />
-            <h2 class="text-2xl font-semibold text-gray-800">{item.name}</h2>
-            <div class="mt-4">
-                <p class="text-gray-700">{item.desc}</p>
+        <div class="w-full max-w-80 h-96 grid grid-rows-10 pb-5 px-2 gap-2 bg-slate-100 rounded-lg shadow-md">
+            <img src={`food/` + item.image} alt="Product Image" class="w-full h-full row-span-5 object-cover mb-4 rounded-md" />
+            <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 row-span-1">{item.name}</h2>
+            <p class="text-base sm:text-xl text-gray-700 row-span-2 pt-4">{item.desc}</p>
+            <div class="mt-4 row-span-2">
                 <div className='flex justify-between mt-6'>
                     <div class="flex items-center ">
-                        <span class="text-3xl font-semibold mr-2">₹</span>
-                        <span class="text-3xl font-bold text-gray-800">{item.price}</span>
+                        <span class="text-xl font-semibold mr-2">₹</span>
+                        <span class="text-2xl font-bold text-gray-800">{item.price}</span>
                     </div>
                     {
                         Qty === 0 ? <div>
-                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full" onClick={inc}>Add To Cart</button>
+                            <button className="bg-blue-500 hover:bg-blue-600 text-xl text-white font-bold rounded-full px-2 py-1" onClick={inc}>Add To Cart</button>
                         </div> :
-
-                            <div className="flex justify-between mt-6">
-                                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full" onClick={dec}>-</button>
-                                <span className="text-3xl font-bold text-gray-800">{Qty}</span>
-                                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full" onClick={inc}>+</button>
-                            </div>
+                        <div className="flex items-center justify-between text-2xl">
+                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full flex items-center justify-center" onClick={dec}><Remove/></button>
+                            <span className=" font-bold text-gray-800">{Qty}</span>
+                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full flex items-center justify-center" onClick={inc}><Add/></button>
+                        </div>
                     }
                 </div>
             </div>

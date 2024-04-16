@@ -28,13 +28,20 @@
 .slide1 {
   background-image: url("../../../images/pexels-pixabay-372882.jpg");
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-clip: content-box;
 
   /* position: relative; */
 }
 
 .slide2 {
   background-image: url("../../../images/s24.jpg");
+
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-clip: content-box;
 
   position: relative;
 }
